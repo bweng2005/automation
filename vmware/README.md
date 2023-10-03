@@ -13,6 +13,8 @@ autoutil.py
 
 vm_deploy.yaml
 
+User can run this script in this command line: "./vm_operation.py -fy vm_deploy.yaml -ys esx_1 -l INFO -o vm_operation-1.log"
+
 ### Parameters:
 yamlfile: User specified yaml file
 
