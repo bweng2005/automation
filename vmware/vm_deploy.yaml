@@ -1,0 +1,34 @@
+---
+VCenter:
+    vcenter_name: vcenter-FQDN 
+    vcenter_user: vcenter-username
+    vcenter_pw: vcenter-password
+    ssl-check: True           # user can specify False as well
+    datacenter: vcenter-datacenter
+    folder: vcenter-folder
+    base_vmname: vm-basename  # user can sepcify vm-basename as "vm-001" or "vm-[date]"
+    hostname_update: True     # user can specify False to not to update VM hostname
+    power_on: True            # user can specify False to power off the VM after the VM is deployed
+
+esx_1:
+    - esx: ESXi-FQDN
+      template: vm-template-name
+      datastore: vm-datastore 
+      vm_user: vm-admin-username
+      vm_password: vm-admin-password
+      vm_count: 10            # deployed virtual machine number
+      network: vm-network
+      ip1: vm-ip-addresses    # user can specify the IP addresses in the form of 192.168.51.x - y
+      netmask: vm-ip-netmask
+      gateway: vm-ip-gateway
+      dns: vm-ip-dns
+
+esx_2:
+    - esx: ESXi-FQDN
+      template: vm-template-name
+      datastore: vm-datastore 
+      vm_user: vm-admin-username
+      vm_password: vm-admin-password
+      vm_count: 10            # deployed virtual machine number
+      network: vm-network
+      ip: dhcp
