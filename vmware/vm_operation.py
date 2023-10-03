@@ -5,12 +5,10 @@
   
   This python script allows user to clone one or multiple VMWare ESXi virtual machines 
   based on existing template. This python script uses the python module "vmwarevms.py" 
-  to implement the detailed virtual machine deployment or deletion. For the detailed
-  information regarding python module "vmwarevms.py", please check this python script 
-  'vmwarevms.py". 
+  to implement the detailed virtual machine deployment. For the detailed information
+  regarding python module "vmwarevms.py", please check this python script 'vmwarevms.py". 
   To get the help menu of this script, please run "python3 vm_operation.py -h" to get 
-  a detailed description on how to use this script.
-  
+  a detailed description on how to use this script.  
 """
 
 import sys
