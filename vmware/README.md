@@ -7,20 +7,16 @@ These VMware python automation scripts allow user to deploy or delete VMware vir
 
 ### Components:
 - vmwarevms.py
-
 - vm_operation.py
-
 - autoutil.py
-
 - vm_deploy.yaml
 
-User can run this script in this command line: "./vm_operation.py -fy vm_deploy.yaml -ys esx_1 -l INFO -o vm_operation-1.log"
+User can run this script in this command line:
+
+``` ./vm_operation.py -yf vm_deploy.yaml -ys esx_1 -l INFO -o vm_operation-1.log```
 
 ### Parameters:
-- yamlfile: User specified yaml file
-
-- yamlsection: User specified ESXi section to deploy the virtual machines in the yaml file
-
-- loglevel: Log file level. The default log file level is "INFO".
-
-- outlogfile: Output log file name. The default output log file name is "vm_oper_$date.log".   
+- -yf, --yamlfile: User specified yaml file
+- -ys, --yamlsection: User specified ESXi section to deploy the virtual machines in the yaml file
+- -l, --loglevel: Log file level. The default log file level is "INFO".
+- -o, --outlogfile: Output log file name. The default output log file name is "vm_oper_$date.log".   
