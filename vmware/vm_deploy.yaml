@@ -10,6 +10,7 @@ VCenter:
     hostname_update: True     # user can specify False to not to update VM hostname
     power_on: True            # user can specify False to power off the VM after the VM is deployed
 
+# This ESXi configuration uses user specified IP addresses to configure deployed virtual machines' IP addresses
 esx_1:
     - esx: ESXi-FQDN
       template: vm-template-name
@@ -23,6 +24,7 @@ esx_1:
       gateway: vm-ip-gateway
       dns: vm-ip-dns
 
+# This ESXi configuration uses DHCP to configure deployed virtual machines' IP addresses
 esx_2:
     - esx: ESXi-FQDN
       template: vm-template-name
