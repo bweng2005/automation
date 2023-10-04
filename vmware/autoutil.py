@@ -6,7 +6,7 @@ import re
 __all__ = ['build_vmname', 'writelog']
 
 # Build several virtual machines name based on "base_vmname" and the count.
-# The virtual machine names are saved in a list and returned to called.
+# The virtual machine names are saved in a list and returned to caller.
 #
 def build_vmname(base_vmname, count):
 
@@ -39,7 +39,7 @@ def build_vmname(base_vmname, count):
 
     return vm_list
 
-# write log message to a log file
+# Write log message to a log file. User can specify whether to include timestamp in the log message.
 #
 def writelog(logfile_name, logmsg, writetime = True):
     mypid = os.getpid()
