@@ -23,12 +23,12 @@ from vmwarevms import vms
 
 def _get_ip_from_range(ip_range, vm_ips, mylogger):
     ip_range = ip_range.replace(" ", "")
-    if(re.search(r'-', ip_range, re.M|re.I) == None):   # search if ip is like "10.21.0.41--51"
+    if(re.search(r'-', ip_range, re.M|re.I) == None):   # search if ip is like "192.168.0.41--51"
         vm_ips.append(ip_range)
         return 0
 
-    ip_list = re.split('-+', ip_range)      # ip_range is like "10.21.0.41--51" 
-    if(len(ip_list) != 2):                  # ip_list should be ['10.21.0.41', '51'] or ['10.21.0.41', '10.21.0.51']
+    ip_list = re.split('-+', ip_range)      # ip_range is like "192.168.0.41--51" 
+    if(len(ip_list) != 2):                  # ip_list should be ['192.168.0.41', '51'] or ['192.168.0.41', '192.168.0.51']
         mylogger.warning("Please provide a valid virtual machine IP address or range: %s" % ip_range)
         return 1
 
