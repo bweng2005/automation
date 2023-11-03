@@ -36,7 +36,6 @@ get_bash51_process_exit_code() {
 
         echo "PID $PID exits with exit code as $exit_code"
         unset pid_array[$PID]
-        #sleep 1
     done
 }
 
