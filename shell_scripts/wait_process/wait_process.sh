@@ -45,7 +45,7 @@ get_bash51_process_exit_code() {
 #
 for count in {1..5}
 do
-    ./script1.sh >> /dev/null &
+    ./sample_process.sh >> /dev/null &
     PID=$!
     pid_array[$PID]=$PID
 done
