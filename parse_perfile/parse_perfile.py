@@ -4,7 +4,7 @@ import re
 import sys
 import argparse
 
-# extract performance latency from a line like this:
+# Extract performance latency from a line like this:
 # "shmem_p_latency___None___size__256___latency 3.95264 -us"
 #
 def extract_latency(line_list):
@@ -28,6 +28,7 @@ def extract_latency(line_list):
 # performance details. This includes either latency or throughput detail. For throughput, this
 # function can differentiate between uni/bidi. For latency, this function can differentiate 
 # among thread/warp/block.
+#
 def get_perf_details(perf_section):
     uni, bidi = {}, {} 
     thread, warp, block = {}, {}, {}
@@ -207,7 +208,8 @@ def get_perf_details(perf_section):
 
     print("-"*120)
     
-# for each test, get its test performance results
+# For each test run, get its test performance results. 
+# In the performance output file, each test run is marked by "&&&& RUNNING..."
 #
 def get_test_result(test_name, test_section):
     test_result = "Not found"
@@ -242,7 +244,7 @@ def get_test_result(test_name, test_section):
 
                 start_index = None       
 
-# get test performance results from the user provided file
+# Get test performance results from the user provided file
 #
 def get_test_performance(input_file):
     try:
