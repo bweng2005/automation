@@ -15,8 +15,8 @@ This Python script parse_perfile.py can be used to parse certain performance out
     
     "shmem_p_bw___None___size__8192___BW 1.862648 +GB/sec"
     
-  - Within each performance test cycle, if it contains either "uni" or "bidi" throughput entries, the script will show the highest individual "uni" or "bidi" throughput.
-  - Within each performance test cycle, if it contains either "Thread", "Warp" or "Block" latency entries, the script will show the lowest individual "Thread", "Warp" or "Block" latency.
+  - Within each performance test cycle, if it contains either "uni" or "bidi" throughput entries, the script will show the highest individual "uni" or "bidi" throughput respectively.
+  - Within each performance test cycle, if it contains either "Thread", "Warp" or "Block" latency entries, the script will show the lowest individual "Thread", "Warp" or "Block" latency respectively.
 
 User can run this script in this command line:
 
