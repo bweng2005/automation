@@ -1,7 +1,7 @@
 ## parse_perfile script
 
 ### Description:
-This Python script parse_perfile.py can be used to parse certain performance output files and show the performance run statistics. 
+This Python script parse_perfile.py can be used to parse certain performance output files and show the performance run statistics. This Python script has been tested on Python 3.9 on both Windows and Linux platform.
 
 ### Components:
 - parse_perfile.py: This Python script can parse a performance output file and show the performance test run statistics for different performance test runs.
